@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Favorite Person ❤️</title>
+    <title>A Small Request 🥺💸</title>
     <style>
         body {
             margin: 0;
@@ -13,24 +13,24 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #ffe3e3 0%, #ffd1d1 100%);
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
             text-align: center;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px 40px;
             border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(255, 154, 162, 0.3);
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.2);
             backdrop-filter: blur(10px);
             max-width: 85%;
             z-index: 10;
         }
 
         h1 {
-            color: #ff4d6d;
+            color: #2e7d32;
             font-size: 2.2rem;
             margin-bottom: 10px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
@@ -42,55 +42,27 @@
             margin-bottom: 30px;
         }
 
-        /* Sparkling Heartbeat Animation */
-        .heart-container {
+        /* Pulsing Money Bag Icon */
+        .money-container {
             position: relative;
             width: 100px;
             height: 100px;
-            margin: 0 auto 25px auto;
+            margin: 0 auto 15px auto;
+            font-size: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: moneyPulse 1.2s infinite cubic-bezier(0.215, 0.610, 0.355, 1);
+            filter: drop-shadow(0 0 15px rgba(76, 175, 80, 0.6));
         }
 
-        .heart {
-            background-color: #ff4d6d;
-            display: inline-block;
-            height: 50px;
-            margin: 0 10px;
-            position: relative;
-            top: 20px;
-            transform: rotate(-45deg);
-            width: 50px;
-            border-radius: 3px;
-            animation: heartbeat 1.2s infinite cubic-bezier(0.215, 0.610, 0.355, 1);
-            box-shadow: 0 0 20px #ff4d6d;
-        }
-
-        .heart:before,
-        .heart:after {
-            content: "";
-            background-color: #ff4d6d;
-            border-radius: 50%;
-            height: 50px;
-            position: absolute;
-            width: 50px;
-        }
-
-        .heart:before {
-            top: -25px;
-            left: 0;
-        }
-
-        .heart:after {
-            top: 0;
-            left: 25px;
-        }
-
-        @keyframes heartbeat {
-            0% { transform: scale(0.95) rotate(-45deg); }
-            20% { transform: scale(1.1) rotate(-45deg); }
-            40% { transform: scale(0.98) rotate(-45deg); }
-            60% { transform: scale(1.15) rotate(-45deg); box-shadow: 0 0 30px #ff758f; }
-            80% { transform: scale(1) rotate(-45deg); }
-            100% { transform: scale(0.95) rotate(-45deg); }
+        @keyframes moneyPulse {
+            0% { transform: scale(0.95); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(0.98); }
+            60% { transform: scale(1.15); }
+            80% { transform: scale(1); }
+            100% { transform: scale(0.95); }
         }
 
         /* Buttons styling */
@@ -115,14 +87,14 @@
         }
 
         #yesBtn {
-            background-color: #ff4d6d;
+            background-color: #2e7d32;
             color: white;
         }
 
         #yesBtn:hover {
             transform: scale(1.1);
-            background-color: #ff758f;
-            box-shadow: 0 5px 20px rgba(255, 77, 109, 0.4);
+            background-color: #388e3c;
+            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4);
         }
 
         #noBtn {
@@ -131,13 +103,13 @@
             position: absolute;
         }
 
-        /* Floating cute icons */
+        /* Floating Money Bills & Emojis */
         .floating-emoji {
             position: absolute;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             bottom: -50px;
-            opacity: 0.8;
-            animation: floatUp 5s linear infinite;
+            opacity: 0.85;
+            animation: floatUp 4.5s linear infinite;
             z-index: 1;
             user-select: none;
         }
@@ -157,47 +129,42 @@
 <body>
 
     <div class="container">
-        <!-- Sparkling Heart -->
-        <div class="heart-container">
-            <div class="heart"></div>
-        </div>
+        <!-- Pulsing Money Bag -->
+        <div class="money-container">💰</div>
 
-        <h1>Hey daddyyy! 🥰</h1>
-        <p>Will you be give a baby soon? 🥺👉👈</p>
+        <h1>Hey Handsome! 🥰💸</h1>
+        <p>Your favorite girl needs a tiny little blessing... can you send some money? 🥺👉👈💵</p>
 
         <div class="btn-container">
-            <button id="yesBtn" onclick="celebrate()">Yes! 💖</button>
+            <button id="yesBtn" onclick="celebrate()">Yes! 🤑</button>
             <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No 🥺</button>
         </div>
     </div>
 
     <script>
-        // Array of cute emojis to float in the background
-        const emojis = ['👶', '🍼', '🧸', '💖', '✨', '🥰', '💕', '🌹'];
+        // Array of money and cute emojis to float in the background
+        const emojis = ['💵', '💸', '💰', '🤑', '✨', '💖', '🥰', '🪙'];
 
-        // Function to dynamically spawn floating cute icons
+        // Function to dynamically spawn floating cash icons
         function createFloatingEmoji() {
             const emoji = document.createElement('div');
             emoji.classList.add('floating-emoji');
             
-            // Grab a random cute baby or love emoji
             emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
             
-            // Randomize position and animation properties
             emoji.style.left = Math.random() * 100 + 'vw';
-            emoji.style.animationDuration = (Math.random() * 3 + 3) + 's'; // Between 3s and 6s
-            emoji.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+            emoji.style.animationDuration = (Math.random() * 2.5 + 2.5) + 's'; // Fast floating money
+            emoji.style.fontSize = (Math.random() * 1.5 + 1.2) + 'rem';
             
             document.body.appendChild(emoji);
 
-            // Clean up emoji after it leaves screen
             setTimeout(() => {
                 emoji.remove();
-            }, 6000);
+            }, 5000);
         }
 
-        // Spawn background emojis automatically
-        setInterval(createFloatingEmoji, 400);
+        // Spawn background cash automatically
+        setInterval(createFloatingEmoji, 300);
 
         // Make the "No" button run away!
         function moveButton() {
@@ -205,7 +172,6 @@
             const container = document.querySelector('.container');
             const rect = container.getBoundingClientRect();
             
-            // Define safe boundaries inside the viewport but away from original spot
             const padding = 20;
             const maxX = window.innerWidth - noBtn.offsetWidth - padding;
             const maxY = window.innerHeight - noBtn.offsetHeight - padding;
@@ -213,9 +179,8 @@
             let randomX = Math.random() * maxX;
             let randomY = Math.random() * maxY;
 
-            // Simple check to keep it from overlapping perfectly on the text container initially
             if (randomX > rect.left && randomX < rect.right && randomY > rect.top && randomY < rect.bottom) {
-                randomX = Math.random() * 50; // Force it out to the edges
+                randomX = Math.random() * 50; 
             }
 
             noBtn.style.position = 'fixed';
@@ -223,20 +188,18 @@
             noBtn.style.top = randomY + 'px';
         }
 
-        // Action when he successfully hits "Yes!"
+        // Action when he hits "Yes!"
         function celebrate() {
             document.querySelector('.container').innerHTML = `
-                <div class="heart-container">
-                    <div class="heart" style="animation-duration: 0.5s;"></div>
-                </div>
-                <h1>YAYYY! 🎉🥳</h1>
-                <p style="font-size: 1.4rem;">I knew you'd say yes! I'll have a cute baby to abuse and not you! 🥰❤️ I love you hope you had a wonderful day at work!</p>
-                <div style="font-size: 4rem; animation: heartbeat 1s infinite;">👶🍼🧸💖</div>
+                <div class="money-container" style="animation-duration: 0.4s;">🤑</div>
+                <h1>THANK YOUUU! 🎉💸</h1>
+                <p style="font-size: 1.4rem;">You're literally the best provider ever! Check your bank app, I'm waiting! 🥰❤️ standard transfers accepted!</p>
+                <div style="font-size: 4rem; animation: moneyPulse 0.8s infinite;">💰💵💸✨</div>
             `;
             
-            // Shower the screen with extra love emojis
-            for(let i = 0; i < 50; i++) {
-                setTimeout(createFloatingEmoji, i * 50);
+            // Explosion of cash rains down
+            for(let i = 0; i < 60; i++) {
+                setTimeout(createFloatingEmoji, i * 40);
             }
         }
     </script>
